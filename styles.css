@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap");
+
+:root {
+  color: #d9d9d9;
+  background: #050505;
+  font-family: "DM Sans", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; min-width: 320px; background: radial-gradient(circle at 50% 0, #171717, #050505 520px); }
+a { color: inherit; }
+
+.site-shell { width: min(840px, calc(100% - 32px)); margin: 0 auto; padding: 24px 0 64px; }
+.site-header { display: flex; justify-content: center; margin-bottom: 24px; }
+.brand { display: block; width: min(250px, 62vw); }
+.brand-mark { display: block; width: 100%; height: auto; }
+.content-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr); gap: 18px; align-items: start; }
+.main-column, .side-column { display: grid; gap: 18px; }
+.card { padding: 14px; border: 1px solid #282828; border-radius: 8px; background: #111; box-shadow: 0 10px 30px #0008; }
+.eyebrow { margin: 0 0 12px; color: #f0f0f0; font-family: "Chakra Petch", sans-serif; font-size: 1.1rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.feature-image, .game-grid img, .portrait { display: block; width: 100%; border-radius: 5px; }
+.game-grid { display: flex; justify-content: flex-start; gap: 14px; }
+.game-grid a { display: block; width: 112px; }
+.game-grid img { aspect-ratio: 1; object-fit: cover; }
+.steam-widget { margin-top: 14px; overflow: hidden; border-radius: 5px; }
+.steam-widget iframe { display: block; width: 100%; min-height: 190px; border: 0; }
+.button { padding: 10px 15px; border-radius: 5px; background: #cc6600; color: #fff; text-decoration: none; font-family: "Chakra Petch", sans-serif; font-size: .9rem; font-weight: 600; letter-spacing: .02em; }
+.button-muted { background: #4b4b4b; }
+.social-links { display: flex; flex-wrap: nowrap; justify-content: space-between; gap: 2px; }
+.social-links a { display: grid; flex: 0 0 28px; width: 28px; height: 28px; place-items: center; border-radius: 50%; color: #fff; text-decoration: none; }
+.social-links img { display: block; width: 17px; height: 17px; }
+.social-links a:hover, .button:hover { filter: brightness(1.25); }
+.social-links a { transition: background-color .18s ease, transform .18s ease; }
+.social-links a:hover { filter: none; transform: translateY(-1px); }
+.social-links a:hover img { filter: brightness(0) saturate(100%); }
+.social-links a:nth-child(1):hover img { filter: brightness(0) saturate(100%) invert(35%) sepia(91%) saturate(1928%) hue-rotate(338deg) brightness(101%) contrast(85%); }
+.social-links a:nth-child(2):hover img { filter: brightness(0) saturate(100%) invert(38%) sepia(97%) saturate(3204%) hue-rotate(246deg) brightness(101%) contrast(103%); }
+.social-links a:nth-child(3):hover img { filter: brightness(0) saturate(100%) invert(79%) sepia(99%) saturate(1205%) hue-rotate(130deg) brightness(102%) contrast(103%); }
+.social-links a:nth-child(4):hover img { filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(7465%) hue-rotate(1deg) brightness(99%) contrast(118%); }
+.social-links a:nth-child(5):hover img { filter: brightness(0) saturate(100%) invert(38%) sepia(87%) saturate(2088%) hue-rotate(314deg) brightness(99%) contrast(89%); }
+.social-links a:nth-child(6):hover img { filter: brightness(0) saturate(100%) invert(49%) sepia(95%) saturate(1845%) hue-rotate(174deg) brightness(96%) contrast(91%); }
+.social-links a:nth-child(7):hover img { filter: brightness(0) saturate(100%) invert(37%) sepia(96%) saturate(1845%) hue-rotate(202deg) brightness(96%) contrast(96%); }
+.bio-card p:not(.eyebrow) { color: #bdbdbd; font-size: .95rem; line-height: 1.55; }
+
+@media (max-width: 640px) {
+  .site-shell { padding-top: 16px; }
+  .content-grid { grid-template-columns: 1fr; }
+  .side-column { grid-template-columns: 1fr; }
+  .social-links { order: -1; }
+}
+
+@media (max-width: 360px) {
+  .social-links { gap: 0; padding-left: 9px; padding-right: 9px; }
+  .social-links a { flex-basis: 26px; width: 26px; height: 26px; }
+  .social-links img { width: 16px; height: 16px; }
+}
